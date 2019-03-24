@@ -4,7 +4,7 @@ public class SchoolMain {
 
 	public static void main(String[] args) {
 		// Student class를 참조해서 Student 객체를 생성해보자
-		//만들고자 하는 객체의 calss명 변수명 = new class명();
+		//만들고자 하는 객체의 calss명 변수명 = new class명(); ->클래스명:Student 변수명 st 이고 new는 배열 선언한다는 것.
 		Student st = new Student();   // st는 stack에 생성 student의 구성요소만큼 heap에 생성. 주소값이 달라서 st==st2가 다른것
 		System.out.println(st);
 		System.out.println(st.name);
