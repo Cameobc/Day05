@@ -7,6 +7,7 @@ public class SchoolMain04 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Teacher hj = new Teacher();
+		StudentView view = new StudentView();
 		System.out.println("선생님의 이름을 입력하세요.");
 		hj.name = sc.next();
 		System.out.println("선생님의 과목을 입력하세요.");
@@ -40,25 +41,15 @@ public class SchoolMain04 {
 					student.total=student.kor+student.eng+student.math;
 					student.avg=student.total/3.0;
 					hj.students[i]=student;
-
 				}//for end
 				break;	
 			case 2:
 				if(hj.students!=null) {
-					for(int i =0; i<hj.students.length;i++) {
-						System.out.println("학생 이름 : "+hj.students[i].name);
-						System.out.println("학생 번호 : "+hj.students[i].num);
-						System.out.println("국어 점수 : "+hj.students[i].kor);
-						System.out.println("수학 점수 : "+hj.students[i].math);
-						System.out.println("영어 점수 : "+hj.students[i].eng);
-						System.out.println("전체 점수 : "+hj.students[i].total);
-						System.out.println("평      균 : "+hj.students[i].avg);
-						System.out.println("=============================");
+					for(int i =0; i<hj.students.length;i++) {			
 					}//for
 				}else {
 					System.out.println("학생정보가 없습니다.");
 				}
-
 				break;
 			case 3:			
 				if(hj.students != null) {
@@ -67,18 +58,10 @@ public class SchoolMain04 {
 					boolean find = true;
 					for(int i =0; i<hj.students.length;i++) {
 						if(select == hj.students[i].num) {
-							System.out.println("학생 이름 : "+hj.students[i].name);
-							System.out.println("학생 번호 : "+hj.students[i].num);
-							System.out.println("국어 점수 : "+hj.students[i].kor);
-							System.out.println("수학 점수 : "+hj.students[i].math);
-							System.out.println("영어 점수 : "+hj.students[i].eng);
-							System.out.println("전체 점수 : "+hj.students[i].total);
-							System.out.println("평      균 : "+hj.students[i].avg);
-							System.out.println("=============================");
-							find = !find;
+							view.view(hj.students[i]);
+							find = !find; 
 							break;
 						}
-
 					}//for end
 					if(find) {
 						System.out.println("존재하지 않는 번호입니다.");
@@ -91,12 +74,8 @@ public class SchoolMain04 {
 				break;
 			default:
 				check=!check;
-
 			} // switch
 		} //while
-
-
-
 	}
 }
 
