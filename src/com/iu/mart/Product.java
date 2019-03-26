@@ -5,5 +5,6 @@ public class Product {
 	int price;
 	int amount;
 	String brand;
+	double sale;
 } 
 // 제품 정보를 운반하는 곳
