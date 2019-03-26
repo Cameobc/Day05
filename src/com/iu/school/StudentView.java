@@ -19,7 +19,7 @@ public class StudentView {
 
 	//view
 	//학생 한 명의 정보를 출력
-	public void view(Student student) {
+	public void view(Student student) {  //String name, int num...
 		
 		System.out.println("학생 이름 : "+student.name);
 		System.out.println("학생 번호 : "+student.num);
